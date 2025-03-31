@@ -28,7 +28,7 @@ public class GameController : MonoBehaviour
 
 
             GameObject Temp = Instantiate(EnemyObject);
-            Temp.transform.position = new Vector3(Random.Range(-8, 8),Random.Range(-4, 4), 0);
+            Temp.transform.position = new Vector3(Random.Range(-8, 8),Random.Range(-4, 4), 0); //위치는 랜덤으로 옮긴다
 
 
         }
