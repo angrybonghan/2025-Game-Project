@@ -52,7 +52,7 @@ public class PlpyerMovement : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Coin")) ;
+        if (other.CompareTag("Coin")) 
         {
             coinCount++;
             Destroy(other.gameObject);                                  //코인 오브젝트를 제거한다
