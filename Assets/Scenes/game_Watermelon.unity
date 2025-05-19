@@ -748,7 +748,7 @@ MonoBehaviour:
   isGameOver: 0
   maincamera: {fileID: 0}
   fruitTimer: 0
-  gameHeight: 0.3
+  gameHeight: 1
 --- !u!4 &1482594761
 Transform:
   m_ObjectHideFlags: 0
