@@ -49,6 +49,10 @@ public class SimpleBallController : MonoBehaviour
 
     void HandleInput()
     {
+        if (!SimpleTurnMananger.canplay) return;
+
+        if (SimpleTurnMananger.anyBallMoving) return;
+
         if (IsMoving()) return;
 
         if (Input.GetMouseButtonDown(0))
@@ -98,6 +102,8 @@ public class SimpleBallController : MonoBehaviour
         Vector3 direction = new Vector3(-mouseDelta.x, 0, -mouseDelta.y).normalized;                    //방향계산
 
         rb.AddForce(direction * force, ForceMode.Impulse);
+
+        SimpleTurnMananger.OnBallHit();
 
         isDragging = false;
         Destroy(arrow);
